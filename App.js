@@ -12,9 +12,13 @@ import { auth } from './firebase';
 import { Post } from './screens/post';
 import {GroupChatSc} from './screens/groupchatSc' 
 import { AddGroup } from './screens/addGroup';
-
+import {VideoCall} from './screens/videoCall'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import GetLocation from './screens/getLocation';
+import { Profile } from './screens/profile';
+import { ViewProfile } from './screens/viewProfile';
+
 const Stack = createNativeStackNavigator();
 
 
@@ -50,6 +54,12 @@ const App = () => {
         <Stack.Screen name="register" component={Register} options={{ title: 'Register' }} />
         <Stack.Screen name="post" component={Post} options={{ title: 'Post' }} />
         <Stack.Screen name="addGroup" component={AddGroup} options={{ title: 'addGroup' }} />
+        <Stack.Screen name="videoCall" component={VideoCall} options={{ title: 'viedocall' }} />
+        <Stack.Screen name="getLocation" component={GetLocation} options={{ title: 'getLocation' }} />
+        <Stack.Screen name="profile" component={Profile} options={{ title: 'Profiles' }} />
+        <Stack.Screen name="viewProfile" component={ViewProfile} options={{ title: 'Profile' }} />
+
+
 
       </Stack.Navigator>
     </NavigationContainer>

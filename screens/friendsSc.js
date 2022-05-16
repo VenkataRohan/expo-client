@@ -69,8 +69,16 @@ const Friends = ({ navigation, route }) => {
       navigation.navigate('addGroup',{ar:ar,from: from })
       
     }
+    const viewProfile=()=>{
+      navigation.navigate('profile')
+      
+    }
     return (
       <View>
+      <Button
+          title="View Profiles"
+          onPress={viewProfile}
+        />
         <Button
           title="LogOut"
           onPress={handleSignOut}

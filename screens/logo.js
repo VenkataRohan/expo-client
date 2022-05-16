@@ -1,8 +1,17 @@
 import React from 'react';
 import {  StyleSheet, Text, TextInput, TouchableOpacity, ScrollView, View, Button, FlatList, TouchableHighlight, Modal, Alert } from 'react-native';
 //import AsyncStorage from '@react-native-async-storage/async-storage';
+import {LogBox} from "react-native";
 
-const config = "10.59.97.34"
+LogBox.ignoreLogs([
+"ViewPropTypes will be removed",
+"ColorPropType will be removed",
+"EdgeInsetsPropType will be removed",
+"AsyncStorage has been extracted",
+"PointPropType will be removed"
+])
+
+const config = "10.59.102.173"
 //const config="192.168.1.15"
 const { io } = require("socket.io-client")//({pingTimeout: 10000, pingInterval: 30000});;
 const socket = io(`http://${config}:3001`);
